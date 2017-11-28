@@ -49,7 +49,7 @@ angular.module('RouteControllers', [])
         $scope.submitForm = function() {
             if ($scope.todoForm.$valid) {
                 $scope.todo.username = $scope.username;
-                $scope.todos.push($scope.todo);
+                $scope.todos.push($scope.todo)
 
                 TodoAPIService.createTodo(URL + "todo/", $scope.todo, $scope.authToken).then(function(results) {
                     console.log(results);
@@ -89,6 +89,6 @@ angular.module('RouteControllers', [])
                 }).catch(function(err) {
                     console.log(err);
                 })
-            }
-        }
+            };
+        };
     });
